@@ -6,9 +6,7 @@ import Aux from "../../../../../hoc/Auxiliary/Auxiliary";
 
 
 const LocationSec = (props) => {
-    
-    console.log(props.timetable);
-
+   
     // const timeTable = (
     //     <table>
     //         {Object.entries(props.timetable).map( 
@@ -92,7 +90,7 @@ const LocationSec = (props) => {
                 
                 <h1>{props.name}</h1>
                 {table}  
-                <p className={classes.OpenTimeTable} onClick={props.viewTimetableHandler} key={props.name} >View Whole Timetable</p>
+                <p className={classes.OpenTimeTable} onClick={() => {props.gen(props.name);}} key={props.name} >View Whole Timetable</p>
                 <Button text={btnText} className={classes.Button}  />   
                 
     

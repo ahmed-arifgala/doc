@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 import IndivDoc from '../../components/IndivDoc/IndivDoc';
 import Aux from '../../hoc/Auxiliary/Auxiliary';
 import Context from '../../Context/Context';
-import Modal from '../../UI/Modal/Modal';
-
 
 const DoctorList = () => {
 
@@ -72,7 +70,7 @@ const DoctorList = () => {
     ],
       // 'clinic': {}
 
-      viewingTimetable: false
+     // viewingTimetable: false
     }
    );
       
@@ -155,25 +153,25 @@ const DoctorList = () => {
 
 
 
-    const viewTimetableHandler = () => {
-      console.log('handler called');
-      setlocations(
-        (prevLocations)=> ({
-          ...prevLocations,
-          viewingTimetable: true
-        })
-      );
-    }
+    // const viewTimetableHandler = () => {
+    //   console.log('handler called');
+    //   setlocations(
+    //     (prevLocations)=> ({
+    //       ...prevLocations,
+    //       viewingTimetable: true
+    //     })
+    //   );
+    // }
 
-    const hideTimetableHandler = () => {
+    // const hideTimetableHandler = () => {
       
-      setlocations(
-        (prevLocations)=> ({
-          ...prevLocations,
-          viewingTimetable: false
-        })
-      );
-    }
+    //   setlocations(
+    //     (prevLocations)=> ({
+    //       ...prevLocations,
+    //       viewingTimetable: false
+    //     })
+    //   );
+    // }
 
     
 
@@ -181,7 +179,7 @@ const DoctorList = () => {
         
         <Aux>
 
-            <Context.Provider value={{docInfo, userReview, locations, viewTimetableHandler , hideTimetableHandler}}>
+            <Context.Provider value={{docInfo, userReview, locations}}>
                 <IndivDoc />
             </Context.Provider>
 

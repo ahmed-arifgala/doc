@@ -1,0 +1,10 @@
+.NavigationItem{
+    padding: 12px 0;
+}
+
+
+.NavigationItem>a{
+    text-decoration: none;
+    font-size: 23px;
+    font-weight: bold;
+}
