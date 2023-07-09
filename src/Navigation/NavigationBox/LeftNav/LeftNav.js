@@ -5,13 +5,15 @@ import NavigationItem from "../../NavigationItems/NavigationItem/NavigationItem"
 
 const LeftNav = (props) => {
 
-    let output;
+    let output =[];
 
     if(props.name === 'Doctor'){
         output = ['Search Doctor By Speciality', 'Search Doctor By Condition', 'Search Doctor By Treatment', 'Search Online Doctors'];
-    }else{
-        output = Hospital.map((obj)=> (Object.keys(obj)) ) ;
-        console.log(output);
+    }else if (props.name === 'Hospital'){
+        
+       Hospital.forEach((obj)=> output.push('Hospital in ' + Object.keys(obj)[0]));
+
+        console.log('INSIDE LEFT NAV IF: OUTPUT: ', output);
     }
 
     return(
@@ -22,7 +24,7 @@ const LeftNav = (props) => {
             </div>
 
             <div className={classes.Head}>
-                <div className={classes.Button}>X</div>
+                <div className={classes.Button} onClick={props.closeHandler}>X</div>
                 <div className={classes.Heading}>{props.name}</div>
             </div>
             

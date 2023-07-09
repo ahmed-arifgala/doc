@@ -5,8 +5,8 @@ import Layout from "./hoc/Layout/Layout";
 function App() {
   return (
     <div>
-      {/* <DoctorList /> */}
-      <Layout />
+      <DoctorList />
+      {/* <Layout /> */}
     </div>
   );
 }

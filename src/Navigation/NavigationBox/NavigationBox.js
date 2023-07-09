@@ -16,17 +16,18 @@ const NavigationBox = (props) => {
         setItemIndex(i);
     }
 
-    console.log('Inside NavigationBox before Return: ', itemIndex);
+    console.log('Inside NavigationBox before Return: ', itemIndex,);
+    
 
     return(
 
         
-        <div className={classes.NavigationBox}>
-            <Context.Provider value={{itemIndex, changeItemIndex}}>
-                <LeftNav name={props.name}/>
+        <div className={`${classes.NavigationBox} ${props.show ? classes.Open : classes.Close}`}>
+            {<Context.Provider value={{itemIndex, changeItemIndex}}>
+                <LeftNav name={props.name} closeHandler={props.closeHandler}/>
                 <RightNav name={props.name}/>
             </Context.Provider>
-
+            }
         </div>
 
     );

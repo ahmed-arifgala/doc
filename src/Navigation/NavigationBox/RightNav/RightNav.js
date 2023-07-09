@@ -3,8 +3,11 @@ import classes from './RightNav.module.css';
 import { Doctor, Hospital } from "../../../StateData/NavData/NavData";
 import NavigationItem from "../../NavigationItems/NavigationItem/NavigationItem";
 import context from "../../../Context/Context";
+import lahoreImg from '../../../assets/images/NavImages/badshahiMosque.jpg';
 
 const RightNav = (props) => {
+
+    const [image, setImage] = useState('');
 
     console.log('Inside RightNav', props.name);
 
@@ -19,17 +22,34 @@ const RightNav = (props) => {
             console.log('Inside IF');
             setOutput(Doctor[itemIndex]);
         } else if (props.name === 'Hospital') {
-            // setOutput(Hospital);
+            setOutput(Hospital[itemIndex]);
+                        // console.log("Inside IF: " , Hospital[itemIndex][Object.keys(Hospital[itemIndex])[1]])
+            
+            
         }
-    }, [props.name, itemIndex]);
+    }, [props.name, itemIndex, output]);
 
-    console.log(output);
-
-   
-    return(
-        <div className={classes.RightNav}>
     
-            {output && console.log('Inside Return', Object.keys(output))}
+    // useEffect(() => {
+    //         console.log('Inside 2nd useEffect');
+    //         settingImage(output);
+    //     }, [output, itemIndex, props.name, image]);
+        
+    // function settingImage(ob) {
+    //     console.log('Setting Image called', ob);
+    //     setImage(ob.img);
+    //     console.log('obj.img', ob.img);
+    //     console.log('Image', image);
+    // };
+
+    console.log(output)
+
+    return(
+
+        
+        <div className={classes.RightNav} >
+    
+             
         
                 {output && 
                     <div className={classes.List} >
@@ -51,7 +71,7 @@ const RightNav = (props) => {
                         </ul>
                     </div>
                 }
-                   
+
         </div>
     );
 }

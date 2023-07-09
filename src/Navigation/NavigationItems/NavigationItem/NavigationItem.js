@@ -1,6 +1,7 @@
 import React, {useContext} from "react";
 import classes from './NavigationItem.module.css';
 import context from "../../../Context/Context";
+import dropDown from '../../../assets/images/Icons/dropDown.png'
 const NavigationItem = props => {
 
     console.log('NavigationItem called');
@@ -13,18 +14,24 @@ const NavigationItem = props => {
 
     return(
 
-        <li className={classNames} >
+            <li className={classNames} >
             
-            <a 
-                href={props.link} 
-                className={props.active ? classes.active : null} 
-                onMouseOver={ props.isHover ? ()=>changeItemIndex(props.def) : null}
-                >
-                    {props.children}
+                <a 
+                    href={props.link} 
+                    className={props.active ? classes.active : null} 
+                    onMouseOver={ props.isHover ? ()=>changeItemIndex(props.def) : null}
+                    >
+                        {props.children}
+                    
+                </a>
                 
-            </a>
+                <img src={dropDown} alt='icon' />
 
-        </li>
+            </li>
+
+        
+
+
     );
     
 

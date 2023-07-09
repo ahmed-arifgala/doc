@@ -65,3 +65,7 @@
 .NavigationItem>a {
     color: #181818;
 }
+
+.NavigationItem img{
+    display: none;
+}

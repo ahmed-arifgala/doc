@@ -29,8 +29,8 @@ const Doctor =
     ];
 
 const Hospital =
-    {
-        'Karachi': [
+    [
+        {'Karachi': [
             "Aga Khan University Hospital",
             "Liaquat National Hospital & Medical College",
             "Indus Hospital",
@@ -41,9 +41,13 @@ const Hospital =
             "Karachi Institute of Heart Diseases",
             "National Institute of Cardiovascular Diseases (NICVD)",
             "Dow University Hospital"
-        ], 
+        ],
 
-        'Lahore': [
+        img : '../../../assets/images/NavImages/indivDocBg2.jpg'
+    
+    }, 
+
+        {'Lahore': [
             "Shaukat Khanum Memorial Cancer Hospital & Research Centre",
             "Jinnah Hospital",
             "Allama Iqbal Medical College/Jinnah Hospital",
@@ -54,7 +58,11 @@ const Hospital =
             "Punjab Institute of Cardiology"
         ],
 
-        'Islamabad': [
+        img: '../../../assets/images/NavImages/badshahiMosque.jpg'
+    
+    },
+
+        {'Islamabad': [
             "Shifa International Hospital",
             "Pakistan Institute of Medical Sciences (PIMS)",
             "Federal Government Services Hospital",
@@ -63,9 +71,9 @@ const Hospital =
             "Ali Medical Centre",
             "Kulsum International Hospital",
             "Capital Hospital"
-        ],
+        ]},
 
-        'Quetta': [
+        {'Quetta': [
             "Civil Hospital Quetta",
             "Bolan Medical College/Bolan Hospital",
             "Sandeman Provincial Hospital",
@@ -74,9 +82,9 @@ const Hospital =
             "Al-Sheikh Children's and General Hospital",
             "Fatima Dental Hospital",
             "Children's Hospital Quetta"
-        ],
+        ]},
 
-        'Peshawar': [
+        {'Peshawar': [
             "Lady Reading Hospital",
             "Khyber Teaching Hospital",
             "Hayatabad Medical Complex",
@@ -85,19 +93,8 @@ const Hospital =
             "Rehman Medical Institute",
             "Shaukat Khanum Memorial Cancer Hospital & Research Centre",
             "Peshawar Institute of Medical Sciences"
-        ],
-
-        'Gilgit': [
-            "District Headquarter Hospital Gilgit",
-            "Aga Khan Health Service Pakistan",
-            "Combined Military Hospital (CMH) Gilgit",
-            "Civil Hospital Gilgit",
-            "DHQ Hospital Skardu",
-            "Al-Shifa Trust Eye Hospital",
-            "Baltistan Regional Hospital Skardu",
-            "Karishma Welfare Trust Hospital"
-        ]
-    };
+        ]}
+    ];
 
 
 export {Doctor, Hospital};
