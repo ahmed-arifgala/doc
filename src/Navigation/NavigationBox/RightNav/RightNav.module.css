@@ -7,6 +7,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    height: 100vh;
 }
 
 .RightNav::before{
@@ -16,27 +17,23 @@
     left:0;
     width:100%;
     height:100%;
-    background: rgb(1,1,1);
-    background: linear-gradient(239deg, rgba(1,1,1,0.7147233893557423) 25%, rgba(0,0,0,0.8435749299719888) 69%);
+    background: linear-gradient(239deg, rgba(1, 1, 1, 0.493) 25%, rgba(0,0,0,0.8435749299719888) 69%);
 }
 
 .NavigationItem a {
     color: white;
-    font-size: 18px;
-    padding:5%;
+    font-size: 18px !important;
 }
 
-li.NavigationItem:hover{
-    color: white;
+li.NavigationItem:hover a{
+    color: white !important;
 }
 
 .List {
-
     margin-top: 20%;
     margin-left: 4%;
     position:relative;
-    z-index:1;
-    
+    z-index:1;    
 }
 
 .List ul{

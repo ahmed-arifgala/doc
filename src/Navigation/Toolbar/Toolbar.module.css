@@ -13,6 +13,18 @@
     z-index: 90;
 }
 
+.Toolbar {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.Toolbar h1{
+    margin: 0% 4% 0% 2%;
+    width:15%; 
+}
+
+
+
 .Toolbar nav{
     height: 100%;
     width: 60%;

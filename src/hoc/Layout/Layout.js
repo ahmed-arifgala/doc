@@ -1,16 +1,18 @@
 import React from "react";
-import Aux from "../Auxiliary/Auxiliary";
 import Toolbar from "../../Navigation/Toolbar/Toolbar";
 import classes from './Layout.module.css';
+import {Outlet} from 'react-router-dom';
 
-const Layout = (props) => {
+const Layout = () => {
     return (
-            <Aux>
+            <>
                 <Toolbar />
-                {/* <main className={classes.Content} >
-                    {props.children}
-                </main> */}
-            </Aux>
+                <div className={classes.Outlet}>
+                    <Outlet /> 
+                </div>
+                 
+
+            </>
         );
 }
 

@@ -14,7 +14,7 @@ const Doctor =
             "Eye Specialist"
         ]},
 
-        {'Health Conditions': [
+        {'Condition': [
             "Hypertension (High blood pressure)",
             "Diabetes",
             "Obesity",
@@ -25,10 +25,28 @@ const Doctor =
             "Asthma",
             "Cancer",
             "Chronic obstructive pulmonary disease (COPD)"
+        ]},
+
+        {'Treatment' : [
+            'Chemotherapy',
+            'Radiation therapy',
+            'Dialysis',
+            'Psychotherapy',
+            'Radiation therapy'
+        ]},
+
+        {'Online' : [
+            'Online Cardiologist',
+            'Online Pulmonologist',
+            'Online Cancer Specialist',
+            "Online Cosmetologist",
+            "Online Endourologist"
         ]}
+
+
     ];
 
-const Hospital =
+const HospitalData =
     [
         {'Karachi': [
             "Aga Khan University Hospital",
@@ -41,10 +59,8 @@ const Hospital =
             "Karachi Institute of Heart Diseases",
             "National Institute of Cardiovascular Diseases (NICVD)",
             "Dow University Hospital"
-        ],
+        ]
 
-        img : '../../../assets/images/NavImages/indivDocBg2.jpg'
-    
     }, 
 
         {'Lahore': [
@@ -56,10 +72,7 @@ const Hospital =
             "Fatima Memorial Hospital",
             "Services Hospital",
             "Punjab Institute of Cardiology"
-        ],
-
-        img: '../../../assets/images/NavImages/badshahiMosque.jpg'
-    
+        ]
     },
 
         {'Islamabad': [
@@ -97,4 +110,13 @@ const Hospital =
     ];
 
 
-export {Doctor, Hospital};
+const cities = [
+    'Karachi',
+    'Lahore',
+    'Islamabad',
+    'Quetta',
+    'Peshawar'
+]
+
+
+export {Doctor, HospitalData, cities};

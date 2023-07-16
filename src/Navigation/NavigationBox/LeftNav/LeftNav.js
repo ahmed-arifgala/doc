@@ -1,6 +1,6 @@
 import React from "react";
 import classes from './LeftNav.module.css';
-import { Hospital } from "../../../StateData/NavData/NavData";
+import { HospitalData } from "../../../StateData/NavData/NavData";
 import NavigationItem from "../../NavigationItems/NavigationItem/NavigationItem";
 
 const LeftNav = (props) => {
@@ -9,9 +9,10 @@ const LeftNav = (props) => {
 
     if(props.name === 'Doctor'){
         output = ['Search Doctor By Speciality', 'Search Doctor By Condition', 'Search Doctor By Treatment', 'Search Online Doctors'];
-    }else if (props.name === 'Hospital'){
+    }
+    else if (props.name === 'Hospital'){
         
-       Hospital.forEach((obj)=> output.push('Hospital in ' + Object.keys(obj)[0]));
+        HospitalData.forEach((obj)=> output.push('Hospital in ' + Object.keys(obj)[0]));
 
         console.log('INSIDE LEFT NAV IF: OUTPUT: ', output);
     }
@@ -35,6 +36,7 @@ const LeftNav = (props) => {
                                             link={'./'} 
                                             class={classes.NavigationItem} 
                                             def={i} 
+                                            isRight={false}
                                             isHover={true} > 
                                 {ele} 
                             </NavigationItem>
